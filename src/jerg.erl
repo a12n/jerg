@@ -15,6 +15,10 @@
 
 -export([main/1]).
 
+-ifdef(namespaced_digraphs).
+-type digraph() :: digraph:graph().
+-endif.
+
 -define(OPT_SPEC_LIST,
     [
      {source,  $s, "source",  string,                               "Source directory or file."},
